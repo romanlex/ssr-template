@@ -1,0 +1,169 @@
+{
+  "name": "@example/react-ssr-app",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_OPTIONS=--openssl-legacy-provider razzle start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider razzle build --noninteractive",
+    "test": "razzle test --env=jsdom",
+    "start:prod": "NODE_ENV=production node server.js start",
+    "commit": "git-cz",
+    "lint": "NODE_ENV=production eslint ./src",
+    "type-checking": "tsc --rootDir ./src --noEmit --pretty",
+    "pre-commit": "lint-staged"
+  },
+  "engines": {
+    "node": ">=17.0.0",
+    "npm": ">=8"
+  },
+  "dependencies": {
+    "@foxford/foxford-js-sdk": "2.1.73",
+    "@loadable/component": "5.15.2",
+    "@loadable/server": "5.15.2",
+    "@sentry/browser": "6.18.2",
+    "body-parser": "1.19.2",
+    "camelcase": "6.3.0",
+    "compression": "1.7.4",
+    "cookie-parser": "1.4.6",
+    "core-js": "3.21.1",
+    "cors": "2.8.5",
+    "cross-fetch": "3.1.5",
+    "dayjs": "1.10.8",
+    "effector": "22.2.0",
+    "effector-inspector": "0.8.2",
+    "effector-logger": "0.13.4",
+    "effector-react": "22.0.6",
+    "express": "4.17.3",
+    "express-promise-router": "4.1.1",
+    "express-static-gzip": "2.1.5",
+    "http-proxy-middleware": "2.0.3",
+    "inversify": "6.0.1",
+    "js-cookie": "3.0.1",
+    "js-logger": "1.6.1",
+    "local-storage-fallback": "4.1.2",
+    "map-obj": "4.3.0",
+    "morgan": "1.10.0",
+    "npm-upgrade": "3.1.0",
+    "pretty-error": "4.0.0",
+    "ramda": "0.28.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-helmet": "6.1.0",
+    "react-helmet-async": "1.2.3",
+    "react-intl": "5.24.6",
+    "react-is": "17.0.2",
+    "react-router": "5.2.1",
+    "react-router-config": "5.1.1",
+    "react-router-dom": "5.2.1",
+    "reflect-metadata": "0.1.13",
+    "rotating-file-stream": "3.0.3",
+    "serialize-javascript": "6.0.0",
+    "session-file-store": "1.5.0",
+    "styled-components": "5.3.3",
+    "styled-normalize": "8.0.7",
+    "through": "2.3.8",
+    "winston": "3.6.0",
+    "winston-daily-rotate-file": "4.6.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-plugin": "7.16.5",
+    "@commitlint/cli": "16.2.1",
+    "@commitlint/config-conventional": "16.2.1",
+    "@foxford/babel-preset-react-app": "1.2.1",
+    "@loadable/babel-plugin": "5.13.2",
+    "@loadable/webpack-plugin": "5.15.2",
+    "@statoscope/webpack-plugin": "5.20.1",
+    "@types/compression": "1.7.2",
+    "@types/cookie-parser": "1.4.2",
+    "@types/cors": "2.8.12",
+    "@types/ejs": "3.1.0",
+    "@types/express": "4.17.13",
+    "@types/express-promise-router": "3.0.0",
+    "@types/express-session": "1.17.4",
+    "@types/jest": "27.4.1",
+    "@types/js-cookie": "3.0.1",
+    "@types/loadable__component": "5.13.4",
+    "@types/loadable__server": "5.12.6",
+    "@types/luxon": "2.3.0",
+    "@types/morgan": "1.9.3",
+    "@types/node": "17.0.21",
+    "@types/ramda": "0.28.1",
+    "@types/react": "17.0.40",
+    "@types/react-dom": "17.0.13",
+    "@types/react-helmet": "6.1.5",
+    "@types/react-router": "5.1.18",
+    "@types/react-router-config": "5.0.6",
+    "@types/react-router-dom": "5.3.3",
+    "@types/serialize-javascript": "5.0.2",
+    "@types/session-file-store": "1.2.2",
+    "@types/styled-components": "5.1.24",
+    "@types/webpack-env": "1.16.3",
+    "@typescript-eslint/eslint-plugin": "5.14.0",
+    "@typescript-eslint/parser": "5.14.0",
+    "babel-plugin-styled-components": "2.0.6",
+    "commitizen": "4.2.4",
+    "compression-webpack-plugin": "9.2.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "8.10.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-config-standard": "17.0.0-1",
+    "eslint-import-resolver-babel-module": "5.3.1",
+    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-plugin-formatjs": "3.0.0",
+    "eslint-plugin-jest": "26.1.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-react": "7.29.3",
+    "file-loader": "6.2.0",
+    "husky": "7.0.4",
+    "jest": "27.5.1",
+    "lint-staged": "12.3.5",
+    "npm": "8.5.4",
+    "postcss": "8.4.8",
+    "prettier": "2.5.1",
+    "razzle": "4.2.16",
+    "ts-jest": "27.1.3",
+    "typescript": "4.6.2",
+    "url-loader": "4.1.1",
+    "webpack-bundle-analyzer": "4.5.0"
+  },
+  "resolutions": {
+    "file-loader": "6.2.0",
+    "url-loader": "4.1.1",
+    "postcss": "8.2.4"
+  },
+  "jest": {
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest",
+      "\\.css$": "<rootDir>/node_modules/razzle/config/jest/cssTransform.js",
+      "(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/node_modules/razzle/config/jest/fileTransform.js"
+    },
+    "moduleNameMapper": {
+      "lib/(.*)$": "<rootDir>/src/lib/$1"
+    },
+    "transformIgnorePatterns": [
+      "node_modules"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.(ts|js)?(x)",
+      "<rootDir>/src/**/?(*.)(spec|test).(ts|js)?(x)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}
